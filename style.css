@@ -258,7 +258,7 @@ nav a:hover {
 
 .hero-btn span {
 	text-transform: uppercase;
-	font-size: var(--fs-12);
+	font-size: var(--fs-14);
 	font-family: var(--font-title);
 	font-weight: 600;
 }
@@ -274,7 +274,7 @@ nav a:hover {
 	}
 
 	.hero-btn span {
-		font-size: var(--fs-14);
+		font-size: var(--fs-16);
 	}
 }
 
