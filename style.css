@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "Roboto";
+	src: url(assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Satisfy";
+	src: url(assets/fonts/Satisfy/Satisfy-Regular.ttf);
+}
+
 *,
 ::after,
 ::before {
@@ -16,8 +26,8 @@
 	--white: #fff;
 
 	/* Fonts */
-	--font-title: satisfy, serif;
-	--font-texte: roboto, sans-serif;
+	--font-title: Satisfy, serif;
+	--font-texte: Roboto, sans-serif;
 
 	/* Font-size */
 	--fs-12: 0.75rem;
