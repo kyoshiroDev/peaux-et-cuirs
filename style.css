@@ -116,7 +116,7 @@ nav a {
 	color: var(--brown);
 	margin: 0 10px;
 	font-size: var(--fs-14);
-  transition: font-size 0.2s ease-in-out;
+	transition: font-size 0.2s ease-in-out;
 }
 
 nav a:hover {
@@ -270,3 +270,13 @@ nav a:hover {
 		font-size: var(--fs-14);
 	}
 }
+
+/* À propos */
+
+/* Nos créations */
+
+/* Nos resturation */
+
+/* Contact */
+
+/* Footer */
