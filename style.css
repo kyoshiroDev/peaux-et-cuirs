@@ -1,11 +1,15 @@
 @font-face {
 	font-family: "Roboto";
+	font-style: normal;
 	src: url(assets/fonts/Roboto/Roboto-Regular.ttf);
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Satisfy";
+	font-style: normal;
 	src: url(assets/fonts/Satisfy/Satisfy-Regular.ttf);
+	font-display: swap;
 }
 
 *,
@@ -84,7 +88,7 @@ input {
 	justify-content: center;
 	align-items: center;
 	width: 125px;
-  height: auto;
+	height: auto;
 	margin: auto;
 }
 
