@@ -92,10 +92,10 @@ input {
 	margin: auto;
 }
 
-main{
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+main {
+	max-width: 1200px;
+	margin: auto;
+	padding: 20px;
 }
 
 @media (min-width: 768px) {
@@ -289,20 +289,21 @@ nav a:hover {
 }
 
 /* À propos */
-.a-propos-container{
-  display: inline-flex;
-  flex-direction: column;
-  gap: 10px;
+.a-propos-container {
+	display: inline-flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .a-propos-container p {
-  font-size: var(--fs-14);
-    inline-size: 1.4;
+	height: 220px;
+	font-size: var(--fs-14);
+	inline-size: 1.4;
 }
 h2 {
-  font-family: var(--font-title);
-  font-size: var(--fs-26);
-  text-align: center;
+	font-family: var(--font-title);
+	font-size: var(--fs-26);
+	text-align: center;
 }
 /* Nos créations */
 
