@@ -24,7 +24,7 @@
 			content="Peaux&Cuirs: Votre maroquinier est là pour concevoir des articles en cuir sur mesure et restaurer tout type d'objets qui auraient été abîmés par le temps. N'hésitez pas à nous contacter." />
 	</head>
 	<body>
-		<header>
+		<header id="accueil">
 			<div class="nav-content">
 				<img
 					src="assets/images/Logo-peaux-et-cuirs.webp"
@@ -45,10 +45,13 @@
 						<img
 							src="assets/images/logo-facebook.webp"
 							alt="logo facebook"
-							width="50"
-							height="50" />
+							width="150"
+							height="150" />
 					</a>
-					<button class="box box-a" aria-label="boutton-burger">
+					<button
+						class="box box-a"
+						aria-label="boutton-burger"
+            >
 						<div class="container-lignes">
 							<div class="ligne"></div>
 							<div class="ligne"></div>
@@ -60,28 +63,45 @@
 			<div class="hero-section">
 				<h1 class="main-heading">Peaux & Cuirs</h1>
 				<p>Vos envies, notre passion</p>
-				<button
+				<a type="button" href="#a-propos"
 					class="hero-btn hero-btn-1"
-          aria-label="boutton-a-propos"
 					>
 					<span>À propos</span>
-				</button>
-				<button
+      </a>
+				<a type="button" href="#contact"
 					class="hero-btn hero-btn-2"
-					aria-label="button-contact">
+					>
 					<span>Contact</span>
-				</button>
+    </a>
 			</div>
 		</header>
-    <main>
-      <section class="a-propos-container">
-        <h2>Qui sommes-nous ?</h2>
-        <img src="" alt="">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, rerum dolorem fugit accusantium neque praesentium ipsum harum quis aliquam corporis nobis quas dolor expedita sequi sit libero voluptatum ullam, at, itaque consequatur dolorum qui. Molestiae atque consequuntur, praesentium possimus dolorum perferendis dolorem impedit exercitationem repellendus quas amet placeat sed libero, eveniet error at accusamus? Laborum doloremque ipsum deserunt modi! Officiis sapiente tenetur laudantium et aperiam consectetur, dolorum ducimus vitae ad perferendis at ipsum. Quam magnam quidem nam impedit quasi, illum temporibus nesciunt minus sequi aperiam quaerat in vitae totam nulla perspiciatis et quo nemo quis ea. Perferendis consequatur nam autem.
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore tenetur architecto, odit vero id, quasi ullam fugiat debitis eum quae distinctio voluptates laboriosam. Provident earum saepe sint nemo dolorum asperiores ullam adipisci ratione dignissimos, magni sequi repudiandae commodi id amet exercitationem aliquid animi assumenda, delectus minima. Mollitia nemo reiciendis harum magnam est labore laboriosam. Nam ex similique atque dolore vero perferendis mollitia sed at autem? Facilis, quaerat quidem assumenda culpa velit porro neque excepturi nam voluptas repellat a possimus, aspernatur ex, quis suscipit impedit fugit magni. Voluptatem eum ea perspiciatis repellendus ab consequuntur non architecto. Alias repudiandae excepturi libero delectus!</p>
-      </section>
-    </main>
+		<main>
+			<section class="a-propos-container" id="a-propos">
+				<h2>Qui sommes-nous ?</h2>
+				<div>
+					<img
+						src="assets/images/20231010_180005.jpg"
+						alt="" />
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+						rerum dolorem fugit accusantium neque praesentium ipsum harum quis
+						aliquam corporis nobis quas dolor expedita sequi sit libero
+						voluptatum ullam, at, itaque consequatur dolorum qui. Molestiae
+						atque consequuntur, praesentium possimus dolorum perferendis dolorem
+						impedit exercitationem repellendus quas amet placeat sed libero,
+						eveniet error at accusamus? Laborum doloremque ipsum deserunt modi!
+						Officiis sapiente tenetur laudantium et aperiam consectetur, dolorum
+						ducimus vitae ad perferendis at ipsum. Quam magnam quidem nam
+						impedit quasi, illum temporibus nesciunt minus sequi aperiam quaerat
+						in vitae totam nulla perspiciatis et quo nemo quis ea. Perferendis
+						consequatur nam autem.
+					</p>
+				</div>
+			</section>
+      <section id="creations"></section>
+      <section id="restaurations"></section>
+      <section id="contact"></section>
+		</main>
 		<script src="script.js"></script>
 	</body>
 </html>

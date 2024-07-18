@@ -49,6 +49,7 @@
 
 	/* Boder */
 	--light-brown-border: solid 2px var(--light-brown);
+	--box-shadow: 10px 10px 6px -4px rgba(0, 0, 0, 0.75);
 }
 
 /* Global & Utilities */
@@ -290,20 +291,47 @@ nav a:hover {
 
 /* À propos */
 .a-propos-container {
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	box-shadow: var(--box-shadow);
+	padding: 20px;
+	border: solid 1px var(--black);
+}
+.a-propos-container div p {
+	font-size: var(--fs-14);
+	line-height: 1.4;
 }
 
-.a-propos-container p {
-	height: 220px;
-	font-size: var(--fs-14);
-	inline-size: 1.4;
-}
 h2 {
 	font-family: var(--font-title);
 	font-size: var(--fs-26);
 	text-align: center;
+}
+
+.a-propos-container img {
+	width: 100%;
+	max-width: 600px;
+}
+
+.a-propos-container div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+@media (min-width: 780px) {
+	.a-propos-container div {
+		display: flex;
+		gap: 20px;
+	}
+
+	.a-propos-container p {
+		max-width: 900px;
+	}
 }
 /* Nos créations */
 
