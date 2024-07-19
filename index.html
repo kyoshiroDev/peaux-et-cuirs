@@ -9,7 +9,11 @@
 		<!-- Content Security Policy-->
 		<meta
 			http-equiv="Content-Security-Policy"
-			content="default-src 'self'" />
+			content="default-src 'self'"
+			object-src="default-src 'self'"
+			media-src="default-src 'self'"
+			font-src="default-src 'self'"
+			connect-src="default 'self'" />
 		<!-- Local Ressources -->
 		<link
 			rel="shortcut icon"
@@ -21,14 +25,14 @@
 		<link
 			rel="stylesheet"
 			href="style.css" />
-      <!--Pré chargement image hero section -->
+		<!--Pré chargement image hero section -->
 		<link
 			rel="preload"
 			fetchpriority="high"
 			as="image"
 			href="/assets/images/outil-maroquinier.webp"
 			type="image/webp" />
-      <!-- Meta Description -->
+		<!-- Meta Description -->
 		<meta
 			name="description"
 			content="Peaux&Cuirs: Votre maroquinier est là pour concevoir des articles en cuir sur mesure et restaurer tout type d'objets qui auraient été abîmés par le temps. N'hésitez pas à nous contacter." />
