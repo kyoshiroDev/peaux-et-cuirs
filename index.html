@@ -5,23 +5,34 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
+		<title>Content Content-Security-Policy</title>
+		<!-- Content Security Policy-->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'" />
+		<!-- Local Ressources -->
+		<link
+			rel="shortcut icon"
+			href="favicon.ico"
+			type="image/x-icon" />
+		<script
+			src="/script.js"
+			type="text/js"></script>
+		<link
+			rel="stylesheet"
+			href="style.css" />
+      <!--Pré chargement image hero section -->
 		<link
 			rel="preload"
 			fetchpriority="high"
 			as="image"
 			href="/assets/images/outil-maroquinier.webp"
 			type="image/webp" />
-		<link
-			rel="stylesheet"
-			href="style.css" />
-		<title>Peaux & Cuirs</title>
-		<link
-			rel="shortcut icon"
-			href="favicon.ico"
-			type="image/x-icon" />
+      <!-- Meta Description -->
 		<meta
 			name="description"
 			content="Peaux&Cuirs: Votre maroquinier est là pour concevoir des articles en cuir sur mesure et restaurer tout type d'objets qui auraient été abîmés par le temps. N'hésitez pas à nous contacter." />
+		<title>Peaux & Cuirs</title>
 	</head>
 	<body>
 		<header id="accueil">
@@ -50,8 +61,7 @@
 					</a>
 					<button
 						class="box box-a"
-						aria-label="boutton-burger"
-            >
+						aria-label="boutton-burger">
 						<div class="container-lignes">
 							<div class="ligne"></div>
 							<div class="ligne"></div>
@@ -63,20 +73,24 @@
 			<div class="hero-section">
 				<h1 class="main-heading">Peaux & Cuirs</h1>
 				<p>Vos envies, notre passion</p>
-				<a type="button" href="#a-propos"
-					class="hero-btn hero-btn-1"
-					>
+				<a
+					type="button"
+					href="#a-propos"
+					class="hero-btn hero-btn-1">
 					<span>À propos</span>
-      </a>
-				<a type="button" href="#contact"
-					class="hero-btn hero-btn-2"
-					>
+				</a>
+				<a
+					type="button"
+					href="#contact"
+					class="hero-btn hero-btn-2">
 					<span>Contact</span>
-    </a>
+				</a>
 			</div>
 		</header>
 		<main>
-			<section class="a-propos-container" id="a-propos">
+			<section
+				class="a-propos-container"
+				id="a-propos">
 				<h2>Qui sommes-nous ?</h2>
 				<div>
 					<img
@@ -98,9 +112,9 @@
 					</p>
 				</div>
 			</section>
-      <section id="creations"></section>
-      <section id="restaurations"></section>
-      <section id="contact"></section>
+			<section id="creations"></section>
+			<section id="restaurations"></section>
+			<section id="contact"></section>
 		</main>
 		<script src="script.js"></script>
 	</body>
