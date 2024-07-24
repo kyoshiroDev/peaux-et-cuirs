@@ -415,4 +415,8 @@ form button:hover {
 	background-color: var(--light-brown);
 	border: var(--light-brown);
 }
+
+.no-valide {
+	border: 2px solid red;
+}
 /* Footer */
