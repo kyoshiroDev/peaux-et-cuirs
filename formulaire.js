@@ -62,6 +62,7 @@ const validateForm = function (form) {
 			// Si le formulaire est valide, on le soumet
 		});
 		if (formulaireIsValide) {
+			console.log("formulaire envoyer");
 			form.submit();
 		}
 	});
