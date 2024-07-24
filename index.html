@@ -34,6 +34,9 @@
 		<script
 			src="script.js"
 			defer></script>
+		<script
+			src="formulaire.js"
+			defer></script>
 		<!--Pré chargement image hero section -->
 		<link
 			rel="preload"
@@ -46,9 +49,6 @@
 			name="description"
 			content="Peaux&Cuirs: Votre maroquinier est là pour concevoir des articles en cuir sur mesure et restaurer tout type d'objets qui auraient été abîmés par le temps. N'hésitez pas à nous contacter." />
 		<title>Peaux & Cuirs</title>
-		<script
-			src="formulaire.js"
-			defer></script>
 	</head>
 	<body>
 		<!-- Header -->
@@ -297,7 +297,7 @@
 					method="POST"
 					name="contact"
 					class="form-validate"
-					netlify
+					data-netlify="true"
 					novalidate>
 					<div class="title-form">
 						<h2>Nous contacter</h2>
