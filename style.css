@@ -78,7 +78,12 @@ input {
 }
 
 .nav-content {
+	z-index: 10;
+	position: fixed;
+	background-color: var(--white);
 	display: grid;
+	width: 100%;
+	padding: 10px 0;
 	grid-template-columns: 1fr 1fr;
 	border-bottom: solid 4px var(--light-brown);
 }
@@ -146,6 +151,7 @@ nav a:hover {
 }
 
 .open {
+	position: fixed;
 	top: initial;
 	height: 100%;
 	transition: height 0.5s ease-in-out;
@@ -153,7 +159,8 @@ nav a:hover {
 
 /* Burger button */
 .box {
-	position: relative;
+	position: fixed;
+	right: 10px;
 	z-index: 11;
 	margin: 30px 0 30px 30px;
 	width: 50px;
@@ -333,10 +340,79 @@ h2 {
 		max-width: 900px;
 	}
 }
-/* Nos créations */
+/* créations et Restaurations */
+.creations-content,
+.restaurations-content {
+	max-width: 750px;
+	margin: auto;
+}
 
-/* Nos resturation */
+#creations h2,
+#restaurations h2,
+#contact h2 {
+	margin: 20px 0;
+}
 
 /* Contact */
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid var(--brown);
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 500px;
+	margin: auto;
+}
 
+.form-content {
+	width: 100%;
+}
+
+.form-content div {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin: auto;
+	margin: 10px 0;
+}
+
+.form-content input {
+	height: 40px;
+}
+
+.form-content input,
+textarea {
+	padding-left: 10px;
+	margin-top: 5px;
+	border-radius: 5px;
+	border: solid 2px var(--brown);
+}
+textarea {
+	padding-top: 10px;
+}
+
+.form-content input:focus,
+.form-content textarea:focus {
+	border: 2px solid var(--light-brown);
+	outline: none;
+}
+
+form button {
+	font-family: var(--font-title);
+	font-weight: 900px;
+	font-size: var(--fs-20);
+	margin: 20px 0 10px 0;
+	width: 180px;
+	padding: 10px 30px;
+	border: var(--brown);
+	border-radius: 10px;
+	background-color: var(--brown);
+	color: var(--yellow);
+}
+
+form button:hover {
+	background-color: var(--light-brown);
+	border: var(--light-brown);
+}
 /* Footer */
