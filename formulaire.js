@@ -67,8 +67,7 @@ const validateForm = function (form) {
 
 		// Si le formulaire est valide, on le soumet
 		if (formIsValid) {
-			console.log("Le formulaire est soumis");
-			// form.submit();
+			form.submit();
 		}
 	});
 
