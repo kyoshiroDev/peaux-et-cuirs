@@ -80,10 +80,6 @@ const validateForm = function (form) {
 		return regex.test(value) && value.trim() !== "";
 	}
 
-	function valideNumber(value) {
-		return !isNaN(value) && value !== "";
-	}
-
 	function valideTel(value) {
 		const regex = /^[0-9]{10}$/;
 		return regex.test(value);

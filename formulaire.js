@@ -1,55 +1,58 @@
 // Récupére le formulaire
-const formulaire = document.querySelector("form");
+const forms = document.querySelectorAll(".form-validate");
+
 const validateForm = function (form) {
 	// ajoute l'événement de soumission
-	formulaire.addEventListener("submit", (e) => {
-		// empêche le rechargement de la page
-		e.preventDefault();
+	form.addEventListener("submit", (e) => {
+		e.preventDefault(); // empêche le rechargement de la page
 
-		// Reset message error
 		const errorMessages = document.querySelectorAll(".error-message");
 		errorMessages.forEach((errorMessage) => {
 			errorMessage.remove();
 		});
+
 		// Récupérer l'ensemble des inputs du formulaire
-		const input = formulaire.querySelectorAll("input, textarea");
+		const inputs = form.querySelectorAll("input, textarea");
+
 		// dire que le formulaire est valide
-		let formulaireIsValide = true;
+		let formIsValid = true;
+
 		// boucler sur les inputs
-		input.forEach((input) => {
+		inputs.forEach((input) => {
 			// récupérer la valeur de l'input
 			const value = input.value;
 			// récupérer le type de l'input
 			const type = input.type;
+
 			// switch type (chaque élément vérifie son propre type)
 			let errorMessage = "";
 			switch (type) {
 				case "text":
 				case "textarea":
-					if (value.trim() === "") {
-						inputVide();
-						input.classList = "no-valide";
-					} else if (!textIsValide(value)) {
-						errorMessage = "Votre texte est pas valide";
-						formulaireIsValide = false;
+					if (!valideText(value)) {
+						errorMessage = "Le champ est requis.";
+						formIsValid = false;
 					}
 					break;
 				case "email":
 					if (value.trim() === "") {
-						inputVide();
-					} else if (!emailIsValide(value)) {
-						errorMessage = "Votre email n'est pas valide";
-						formulaireIsValide = false;
-					}
-				case "tel":
-					if (value === "") {
-						inputVide();
-					} else if (!phoneIsValide(value)) {
-						errorMessage = "Votre email n'est pas valide";
-						formulaireIsValide = false;
+						errorMessage = "L'email est vide.";
+						formIsValid = false;
+					} else if (!valideEmail(value)) {
+						errorMessage = "L'email est invalide.";
+						formIsValid = false;
 					}
 					break;
+				case "tel":
+					if (!valideTel(value)) {
+						errorMessage = "Le numéro de téléphone est invalide.";
+						formIsValid = false;
+					}
+					break;
+				default:
+					break;
 			}
+
 			// Si le type est invalide,
 			// il y a une erreur (input invalide)
 			// On créer une div avec la class error
@@ -58,33 +61,30 @@ const validateForm = function (form) {
 				errorElement.classList.add("error-message");
 				errorElement.textContent = errorMessage;
 				input.parentElement.appendChild(errorElement);
+				input.style.borderColor = "#cc0303";
 			}
-			// Si le formulaire est valide, on le soumet
 		});
-		if (formulaireIsValide) {
-			console.log("formulaire envoyer");
-			form.submit();
+
+		// Si le formulaire est valide, on le soumet
+		if (formIsValid) {
+			console.log("Le formulaire est soumis");
+			// form.submit();
 		}
 	});
-	// Fonction text valide
-	function textIsValide(value) {
-		return value.trim(value !== "");
+
+	function valideText(value) {
+		return value.trim() !== "";
 	}
-	// Fonction email valide
-	function emailIsValide(value) {
+
+	function valideEmail(value) {
 		const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 		return regex.test(value) && value.trim() !== "";
 	}
-	// Fonction tel valide
-	function phoneIsValide(value) {
+
+	function valideTel(value) {
 		const regex = /^[0-9]{10}$/;
 		return regex.test(value);
 	}
-
-	function inputVide(value) {
-		if (value === "") {
-			errorMessage = "ce champ ne doit pas être vide";
-			formulaireIsValide = false;
-		}
-	}
 };
+
+forms.forEach((form) => validateForm(form));
