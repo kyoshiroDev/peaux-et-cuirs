@@ -69,18 +69,6 @@ const validateForm = function (form) {
 
 		// Si le formulaire est valide, on le soumet
 		if (formIsValid) {
-			const sendEmail = form.dataset.email;
-			console.log(sendEmail);
-			if (sendEmail) {
-				sendEmailNetlify(
-					"essaie",
-					"parker",
-					"petter",
-					"parker.petter@gmail.com",
-					"0305203654",
-					"premier test message",
-				);
-			}
 			form.submit();
 		}
 	});
@@ -101,26 +89,3 @@ const validateForm = function (form) {
 };
 
 forms.forEach((form) => validateForm(form));
-
-async function sendEmailNetlify(
-	subject,
-	lastName,
-	firstName,
-	email,
-	phone,
-	message,
-) {
-	await sendEmail({
-		from: "contact@peaux-et-cuir.fr",
-		to: email,
-		subject: subject,
-		template: "contact",
-		parameters: {
-			lastName: lastName,
-			firstName: firstName,
-			email: email,
-			phone: phone,
-			message: message,
-		},
-	});
-}
