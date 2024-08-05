@@ -4,6 +4,7 @@ export default class Formulaire {
 		this.inputs = document.querySelectorAll(".input-form, textarea");
 		this.errorMessages = document.querySelectorAll(".error-message");
 		this.formIsValid = true;
+    this.formInit();
 	}
 
 	formInit() {

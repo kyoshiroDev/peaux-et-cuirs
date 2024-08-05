@@ -3,6 +3,8 @@ export default class Mobilemenu {
 		this.burgerButton = document.querySelector(".box");
 		this.navBar = document.querySelector("nav");
 		this.linkNavBar = document.querySelectorAll(".nav-link");
+    this.buttonBurger();
+		this.linkNav();
 	}
 
 	buttonBurger() {
