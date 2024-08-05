@@ -5,9 +5,7 @@ import Mobilemenu from "./JS/menu-mobile.js";
 import Formulaire from "./JS/formulaire.js";
 
 // Link menu plus boutton burger
-const mobileMenu = new Mobilemenu();
-mobileMenu.buttonBurger();
-mobileMenu.linkNav();
+new Mobilemenu();
+// Formulare de contact
+new Formulaire();
 
-const formulaire = new Formulaire();
-formulaire.formInit();
