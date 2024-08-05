@@ -1,17 +1,13 @@
-const burgerButton = document.querySelector(".box");
-const navBar = document.querySelector("nav");
-const linkNavBar = document.querySelectorAll(".nav-link");
+// Import du menu mobile
+import Mobilemenu from "./JS/menu-mobile.js";
+// Import formulaire
 
-burgerButton.addEventListener("click", () => {
-	burgerButton.classList.toggle("active");
-	navBar.classList.toggle("open");
-});
+import Formulaire from "./JS/formulaire.js";
 
-linkNavBar.forEach((link) => {
-	link.addEventListener("click", () => {
-		if (navBar.classList.contains("open")) {
-			navBar.classList.remove("open");
-			burgerButton.classList.remove("active");
-		}
-	});
-});
+// Link menu plus boutton burger
+const mobileMenu = new Mobilemenu();
+mobileMenu.buttonBurger();
+mobileMenu.linkNav();
+
+const formulaire = new Formulaire();
+formulaire.formInit();

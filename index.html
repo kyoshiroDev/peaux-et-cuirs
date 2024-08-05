@@ -21,21 +21,16 @@
 			crossorigin="anonymous"
 			async></script>
 		<!-- Local Ressources -->
-		<link
-			rel="shortcut icon"
-			href="favicon.ico"
-			type="image/x-icon" />
+		<!--		<link-->
+		<!--			rel="shortcut icon"-->
+		<!--			href="favicon.ico"-->
+		<!--			type="image/x-icon" />-->
 		<link
 			rel="stylesheet"
 			href="style.css" />
 		<script
-			src="creations.js"
-			defer></script>
-		<script
-			src="formulaire.js"
-			defer></script>
-		<script
 			src="script.js"
+			type="module"
 			defer></script>
 
 		<!--Pré chargement image hero section -->
@@ -174,28 +169,27 @@
 								data-bs-target="#carouselExampleIndicators"
 								data-bs-slide-to="2"
 								aria-label="Slide 3"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="3"
-								aria-label="Slide 4"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="4"
-								aria-label="Slide 5"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="5"
-								aria-label="Slide 6"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="6"
-								aria-label="Slide 0"></button>
 						</div>
-						<div class="carousel-inner"></div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									src="assets/images/creations/Valise.webp"
+									class="d-block w-100"
+									alt="..." />
+							</div>
+							<div class="carousel-item">
+								<img
+									src="assets/images/creations/saccoche.webp"
+									class="d-block w-100"
+									alt="..." />
+							</div>
+							<div class="carousel-item">
+								<img
+									src="assets/images/creations/valise-2.png"
+									class="d-block w-100"
+									alt="..." />
+							</div>
+						</div>
 						<button
 							class="carousel-control-prev"
 							type="button"
@@ -222,72 +216,7 @@
 			<!-- Restaurations -->
 			<section id="restaurations">
 				<h2>Nos restaurations</h2>
-				<div class="restaurations-content">
-					<div
-						id="carouselExampleIndicators"
-						class="carousel slide">
-						<div class="carousel-indicators">
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="0"
-								class="active"
-								aria-current="true"
-								aria-label="Slide 1"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="1"
-								aria-label="Slide 2"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="2"
-								aria-label="Slide 3"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="3"
-								aria-label="Slide 4"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="4"
-								aria-label="Slide 5"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="5"
-								aria-label="Slide 6"></button>
-							<button
-								type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="6"
-								aria-label="Slide 0"></button>
-						</div>
-						<div class="carousel-inner"></div>
-						<button
-							class="carousel-control-prev"
-							type="button"
-							data-bs-target="#carouselExampleIndicators"
-							data-bs-slide="prev">
-							<span
-								class="carousel-control-prev-icon"
-								aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button
-							class="carousel-control-next"
-							type="button"
-							data-bs-target="#carouselExampleIndicators"
-							data-bs-slide="next">
-							<span
-								class="carousel-control-next-icon"
-								aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
-					</div>
-				</div>
+				<div class="restaurations-content"></div>
 			</section>
 			<!-- Contact -->
 			<section
@@ -299,7 +228,7 @@
 					name="contact"
 					class="form-validate"
 					data-netlify="true"
-					action="./views/success"
+					action="views/success.html"
 					data-netlify-honeypot="bot-field"
 					novalidate>
 					<div class="title-form">
@@ -308,11 +237,12 @@
 					<div class="form-content">
 						<input
 							name="bot-field"
-							hidden />
+							style="display: none" />
 						<!-- Last name -->
 						<div>
 							<label for="last-name">Nom:</label>
 							<input
+								class="input-form"
 								type="text"
 								name="last-name"
 								id="last-name"
@@ -323,6 +253,7 @@
 						<div>
 							<label for="first-name">Prénom:</label>
 							<input
+								class="input-form"
 								type="text"
 								name="first-name"
 								id="first-name"
@@ -331,12 +262,12 @@
 						</div>
 						<!--Email -->
 						<div>
-							<label for="last-name">Adresse mail:</label>
+							<label for="email">Adresse mail:</label>
 							<input
+								class="input-form"
 								type="email"
 								name="email"
 								id="email"
-								class=""
 								required
 								placeholder="jean-du-jardin@gmail.com" />
 						</div>
@@ -344,6 +275,7 @@
 						<div>
 							<label for="phone">Téléphone:</label>
 							<input
+								class="input-form"
 								type="tel"
 								name="phone"
 								id="phone"
@@ -352,7 +284,7 @@
 						</div>
 						<!-- Texte area -->
 						<div>
-							<label for="last-name">Votre message:</label>
+							<label for="message">Votre message:</label>
 							<textarea
 								name="message"
 								id="message"
