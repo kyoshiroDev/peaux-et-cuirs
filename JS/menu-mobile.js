@@ -13,7 +13,7 @@ export default class Mobilemenu {
 			this.burgerButton.classList.toggle("active");
 			this.navBar.classList.toggle("open");
 
-			if ((this.navBar.classList == "open")) {
+			if (this.navBar.classList == "open") {
 				this.header.style.position = "fixed";
 			} else {
 				this.header.style.position = "absolute";
@@ -27,6 +27,7 @@ export default class Mobilemenu {
 				if (this.navBar.classList.contains("open")) {
 					this.navBar.classList.remove("open");
 					this.burgerButton.classList.remove("active");
+					this.header.style.position = "absolute";
 				}
 			});
 		});
