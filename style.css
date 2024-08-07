@@ -162,7 +162,7 @@ nav a:hover {
 	position: relative;
 	right: 10px;
 	z-index: 11;
-	margin: 30px 0 30px 30px;
+	margin: 30px 0 30px 80px;
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
@@ -391,6 +391,7 @@ textarea {
 }
 textarea {
 	padding-top: 10px;
+	height: 150px;
 }
 
 .form-content input:focus,
@@ -450,3 +451,106 @@ form button:hover {
 	color: var(--light-brown);
 }
 /* Footer */
+.footer-clean {
+	margin-top: 30px;
+	padding: 50px 0 0 0;
+	background-color: #f1f1f1;
+	color: #4b4c4d;
+}
+
+.footer-clean h3 {
+	margin-top: 0;
+	margin-bottom: 12px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.footer-clean ul {
+	padding: 0;
+	list-style: none;
+	line-height: 1.6;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.footer-clean ul a {
+	color: #4b4c4d;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.footer-clean ul a:hover {
+	opacity: 1;
+}
+
+.horaires p {
+	color: inherit;
+}
+
+.footer-clean .item.social {
+	text-align: center;
+}
+
+.footer-clean .item.social > a {
+	font-size: 24px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	margin-left: 10px;
+	color: inherit;
+	opacity: 0.75;
+}
+
+.footer-clean .item.social > a:hover {
+	opacity: 0.9;
+}
+
+.via-formulaire {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.via-formulaire p {
+	color: #4b4c4d;
+}
+
+.via-formulaire a {
+	text-decoration: none;
+	color: var(--brown);
+	cursor: pointer;
+}
+
+.via-formulaire a:hover {
+	color: var(--light-brown);
+}
+
+.footer-clean .copyright {
+	text-align: center;
+	margin-top: 14px;
+	margin-bottom: 0;
+	font-size: 13px;
+	opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+	.footer-clean .item.social > a {
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-clean .item.social > a {
+		margin-top: 10px;
+	}
+	.footer-clean .item {
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.footer-clean .item.social {
+		text-align: center;
+	}
+}
