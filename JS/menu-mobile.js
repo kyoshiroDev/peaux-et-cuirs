@@ -3,14 +3,21 @@ export default class Mobilemenu {
 		this.burgerButton = document.querySelector(".box");
 		this.navBar = document.querySelector("nav");
 		this.linkNavBar = document.querySelectorAll(".nav-link");
-    this.buttonBurger();
+		this.buttonBurger();
 		this.linkNav();
+		this.header = document.querySelector(".nav-content");
 	}
 
 	buttonBurger() {
 		this.burgerButton.addEventListener("click", () => {
 			this.burgerButton.classList.toggle("active");
 			this.navBar.classList.toggle("open");
+
+			if ((this.navBar.classList == "open")) {
+				this.header.style.position = "fixed";
+			} else {
+				this.header.style.position = "absolute";
+			}
 		});
 	}
 
